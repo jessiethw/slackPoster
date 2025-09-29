@@ -1,38 +1,38 @@
 #papers-astroph require=2 
-ANITA 		MATCHING: unique
-ARA 		MATCHING: unique
+ANITA     MATCHING: unique
+ARA     MATCHING: unique
 blazar
 cherenkov telescope array
 cosmic ray
 cosmic-ray
-CTAO 		MATCHING: unique
+CTAO     MATCHING: unique
 dark energy survey
 dark matter
-DES 		MATCHING: unique
+DES     MATCHING: unique
 Fermi
 flavor
 gamma-ray
 gamma ray
 gravitational wave
-HAWC 		MATCHING: unique
-HELIX 		MATCHING: unique
-H.E.S.S.	MATCHING: unique
+HAWC     MATCHING: unique
+HELIX     MATCHING: unique
+H.E.S.S.     MATCHING: unique
 icecube
 kilonova
 large synoptic survey telescope
 legacy survey of space and time
-LSST		MATCHING: unique
+LSST     MATCHING: unique
 machine learning
-MAGIC		MATCHING: unique
+MAGIC     MATCHING: unique
 multi messenger
 multimessenger
 multi-messenger
 neutrino
+nova
 radio
 Pacific Ocean Neutrino Experiment
-P-ONE 		MATCHING: unique
-supernova
+P-ONE      MATCHING: unique
 transient
 x-ray
 xray
-VERITAS 	MATCHING: unique
+VERITAS     MATCHING: unique

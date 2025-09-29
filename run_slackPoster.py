@@ -6,18 +6,8 @@ import os
 
 
 main_dict = {
-             'astro': 'astro,physics',
-             'wipac': 'astro,physics,hep',
-             'hep': 'hep,physics',
-             'amo': 'physics',
-             'biophysics' : 'physics',
-             'condmat': 'cond,quant,physics',
-             'plasma': 'physics,astro'
+             'lemma': 'astro,physics,hep',
 }
-
-# read from gitignored-email file to get addresses
-with open('emails.txt', 'r') as emails:
-     email_addresses = ','.join([x.strip() for x in emails.readlines()])
 
 for name, channels in main_dict.items():
 
