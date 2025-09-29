@@ -7,7 +7,6 @@ His respository is available here: https://github.com/zingale/lazy-astroph
 
 ## How it works:
 
-We have directories for each \#papers-\* channel on our slack. 
 In each directory is a file called `inputs` containing the name of the 
 channel it'll post to and all keywords the code will search arXiv for. 
 One may also propose to add `require=2` (or some other number) to the inputs 
@@ -21,24 +20,15 @@ This is the code that will take all the keyword inputs and search the
 abstracts and titles of the latest arXiv papers for them.
 
 `run_slackPoster.py` contains the instructions that allows us 
-to run `lazy_astroph.py` for each \#papers-\* channel. 
+to run `lazy_astroph.py` for each slack channel we want to post to. 
 
 This works with feedparser version 5.2.1
-
-
-## Questions:
-
-If you have any questions about this, you can send a message to 
-[Rob Morgan](https://github.com/rmorgan10) or
-[Abby Bishop](https://github.com/abigailbishop). 
 
 
 ## To Create a New Channel:
 
 This tutorial is for anyone who would like to impliment this 
-  functionality into another Slack workspace and as a reminder for us. 
-If you would like a new channel to be added to the UWMadison PGSC Slack,
-  please reach out to Abby on Slack. 
+  functionality into another Slack workspace. 
 
 1. On Slack, create the channel. 
 1. Log into your workspace on [api.slack.com](https://api.slack.com).
