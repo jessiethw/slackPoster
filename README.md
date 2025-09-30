@@ -22,7 +22,7 @@ abstracts and titles of the latest arXiv papers for them.
 `run_slackPoster.py` contains the instructions that allows us 
 to run `lazy_astroph.py` for each slack channel we want to post to. 
 
-This works with feedparser version 5.2.1
+This works with feedparser version 6.0.12.
 
 
 ## To Create a New Channel:
