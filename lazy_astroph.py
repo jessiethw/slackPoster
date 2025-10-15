@@ -579,7 +579,13 @@ def doit():
             papers.append(paper)
         last_id.append([param_file, last_id_tmp])
 
-    print([x.keywords for x in papers])
+    n=0
+    for x in papers:
+        if len(x.keywords)>=2: 
+            print(x.arxiv_id, x.keywords)
+            n+=1
+    print(n, " papers with 2 or more keyword matches")
+    #print([x.keywords for x in papers])
 
     if not args.dry_run:
         send_all_emails(papers, args.m)
