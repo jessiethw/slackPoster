@@ -2,15 +2,19 @@
 blazar
 cherenkov telescope array
 cosmic ray
+cosmic-ray
 CTAO     MATCHING: unique
-Fermi-LAT
-Fermi-GBM
+dark matter
+Fermi
+flavor
 gamma ray
+gamma-ray
 gravitational wave
 HAWC     MATCHING: unique
 HELIX     MATCHING: unique
 H.E.S.S.     MATCHING: unique
 icecube
+kilonova
 MAGIC     MATCHING: unique
 multimessenger
 multi-messenger
@@ -19,4 +23,7 @@ supernova
 nova     MATCHING: unique
 Pacific Ocean Neutrino Experiment
 P-ONE      MATCHING: unique
+transient
+x-ray
+x ray
 VERITAS     MATCHING: unique
