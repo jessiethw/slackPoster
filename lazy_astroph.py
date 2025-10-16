@@ -493,7 +493,7 @@ def doit():
     args = parser.parse_args()
     
     directory_name = args.inputs[0][0:-7]
-    
+    print(args.inputs)
     # get the keywords
     keywords = []
     try:
@@ -545,7 +545,7 @@ def doit():
 
     # Load in file of selected authors we like to support
     fave_authors = {}
-    author_file = "fave_authors.txt"
+    author_file = directory_name+"/../fave_authors.txt"
     with open(author_file, 'r') as f:
         for line in f: 
             line = line.strip()
