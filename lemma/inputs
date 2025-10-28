@@ -5,7 +5,8 @@ cosmic ray
 cosmic-ray
 CTAO     MATCHING: unique
 dark matter
-Fermi
+Fermi-GBM
+Fermi-LAT
 flavor
 gamma ray
 gamma-ray
@@ -20,10 +21,9 @@ multimessenger
 multi-messenger
 neutrino
 supernova
+supernova remnant
 nova     MATCHING: unique
 Pacific Ocean Neutrino Experiment
 P-ONE      MATCHING: unique
 transient
-x-ray
-x ray
 VERITAS     MATCHING: unique
