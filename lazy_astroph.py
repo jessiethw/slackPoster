@@ -87,6 +87,7 @@ class AstrophQuery:
             self.max_papers)
 
         self.arxiv_channel = arxiv_channel
+        #avoid timeout issues with calls to physics by splitting in two
         self.suffix_dict = {'astro': '-ph.',
                             'cond': '-mat.',
                             'gr': '-qc',
@@ -103,11 +104,13 @@ class AstrophQuery:
                             'nlin': ['AO', 'CG', 'CD', 'SI', 'PS'],
                             'nucl': ['ex', 'th'],
                             'physics': ['acc-ph', 'app-ph', 'ao-ph', 'atom-ph', 'atm-clus', 'bio-ph', 'chem-ph', 
-                                         'class-ph', 'comp-ph', 'data-an', 'flu-dyn', 'gen-ph', 'geo-ph', 'hist-ph', 'ins-det',
-                                         'med-ph', 'optics', 'ed-ph', 'soc-ph', 'plasm-ph', 'pop-ph', 'space-ph'],
+                                        'class-ph', 'comp-ph', 'data-an', 'plasm-ph', 'space-ph'],
+                            'physics2':['gen-ph', 'geo-ph', 'ed-ph', 'hist-ph', 'ins-det','med-ph', 
+                                        'flu-dyn', 'optics', 'soc-ph','pop-ph'],
                             'quant': ['']}
 
-        self.subcat = self.subcat_dict[self.arxiv_channel] 
+        self.subcat = self.subcat_dict[self.arxiv_channel]
+        if self.arxiv_channel == 'physics2': self.arxiv_channel = 'physics'
 
     def get_cat_query(self):
         """ create the category portion of the astro ph query """
@@ -153,8 +156,8 @@ class AstrophQuery:
             response = urlopen(self.get_url()).read()
         except:
             # Get email addresses
-            with open('emails.txt', 'r') as emails:
-                email_addresses = [x.strip() for x in emails.readlines()]
+            #with open('emails.txt', 'r') as emails:
+            #    email_addresses = [x.strip() for x in emails.readlines()]
             
             # Compose Traceback
             body = "I failed on " + args.w.split('/')[0] + ' : ' + self.arxiv_channel
@@ -162,10 +165,12 @@ class AstrophQuery:
             body += traceback.format_exc()
             
             # Send emails
-            for email_add in email_addresses:
-                report(body, "Paper Poster FAILED",
-                       "lazy-astroph@{}".format(platform.node()), email_add)
+            #for email_add in email_addresses:
+            #    report(body, "Paper Poster FAILED",
+            #           "lazy-astroph@{}".format(platform.node()), email_add)
             
+            print("Paper Poster FAILED\n", body)
+
             raise CompletionError
 
         response = response.replace(b"author", b"contributor")
@@ -540,6 +545,8 @@ def doit():
 
     # Search though each arXiv channel, save all the papers. 
     channels_to_search = args.channel.split(',')
+    if 'physics' in channels_to_search:
+        channels_to_search.append('physics2')
     papers = []
     last_id = []
 
